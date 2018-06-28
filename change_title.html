@@ -5,10 +5,15 @@
 </head>
 <body>
 <script>
-var count = 0;
-setTimeout(function () {
-document.title = count++;
-},1000);
+  var count = 0;
+  var change = function () {
+    document.title = count++;
+    setTimeout(change, 1000);
+  };
+  
+  setTimeout(function () {
+    change();
+  },1000);
 </script>
 </body>
 </html>
