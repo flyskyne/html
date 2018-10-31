@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<LINK REL="ShortCut ICON"  href="http://www.okjsp.pe.kr/favicon.ico ">
+<TITLE> New Document </TITLE>
+<script language="Javascript">
+function open_ShortCut() {
+   var WshShell = new ActiveXObject("WScript.Shell");
+   strDesktop = WshShell.SpecialFolders("Desktop");
+   var oUrlLink = WshShell.CreateShortcut(strDesktop + "\\아이엠티처 학교 관리자" );
+   oUrlLink.TargetPath = "http://teacher.iamservice.net";
+   oUrlLink.Save();
+}
+</script>
+</HEAD>
+<body>
+클릭 <a href="javascript:open_ShortCut()">바탕화면아이콘 저장</a>
+</BODY>
+</HTML>
