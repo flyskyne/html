@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body>
+<h1>Article Editor</h1>
+
+<button type="button" id="toArticleJSON">toArticleJSON</button>
+<button type="button" id="toDoc">toDoc</button>
+
+<div id="editor"></div>
+<textarea id="json" style="width: 600px; height: 300px;">[{&quot;type&quot;:&quot;paragraph&quot;,&quot;align&quot;:&quot;left&quot;,&quot;texts&quot;:[{&quot;style&quot;:[&quot;bold&quot;,&quot;underline&quot;],&quot;text&quot;:&quot;Hello &quot;},{&quot;style&quot;:[&quot;bold&quot;],&quot;text&quot;:&quot;Wor&quot;},{&quot;style&quot;:[&quot;underline&quot;],&quot;text&quot;:&quot;ld\n&quot;},{&quot;style&quot;:[],&quot;text&quot;:&quot;B Y E&quot;}]},{&quot;type&quot;:&quot;paragraph&quot;,&quot;align&quot;:&quot;left&quot;,&quot;texts&quot;:[{&quot;style&quot;:[],&quot;text&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&quot;}]},{&quot;type&quot;:&quot;paragraph&quot;,&quot;align&quot;:&quot;center&quot;,&quot;texts&quot;:[{&quot;style&quot;:[],&quot;text&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&quot;}]},{&quot;type&quot;:&quot;paragraph&quot;,&quot;align&quot;:&quot;right&quot;,&quot;texts&quot;:[{&quot;style&quot;:[],&quot;text&quot;:&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&quot;}]},{&quot;type&quot;:&quot;image&quot;,&quot;src&quot;:&quot;https://dummyimage.com/600x400/000/fff&quot;,&quot;desc&quot;:&quot;600 x 400의 검은 배경, 흰 글씨 이미지&quot;},{&quot;type&quot;:&quot;video&quot;,&quot;source&quot;:&quot;youtube&quot;,&quot;source_id&quot;:&quot;rRzxEiBLQCA&quot;,&quot;url&quot;:&quot;https://www.youtube.com/watch?v=rRzxEiBLQCA&quot;,&quot;title&quot;:&quot;TWICE \&quot;Heart Shaker\&quot; M/V&quot;,&quot;thumbnail&quot;:&quot;https://img.youtube.com/vi/rRzxEiBLQCA/0.jpg&quot;},{&quot;type&quot;:&quot;quote&quot;,&quot;text&quot;:&quot;quote\n2 quote&quot;},{&quot;type&quot;:&quot;borderline&quot;,&quot;style&quot;:&quot;1&quot;},{&quot;type&quot;:&quot;borderline&quot;,&quot;style&quot;:&quot;2&quot;},{&quot;type&quot;:&quot;borderline&quot;,&quot;style&quot;:&quot;3&quot;},{&quot;type&quot;:&quot;borderline&quot;,&quot;style&quot;:&quot;4&quot;},{&quot;type&quot;:&quot;headline&quot;,&quot;text&quot;:&quot;제목은 헤드라인에 적으시면 됩니다&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;html&quot;:&quot;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;연번&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;프로그램명&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;날짜&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;지원 가능 인원&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;참가 대상&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;기부 기관&lt;/p&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;(장소)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;1&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;영화&lt;/p&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;‘안시성’&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;12.5.(수)&lt;/p&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;11:00, 14:00, 17:00&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;90명&lt;/p&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;(총 3회/회당 30명)&lt;/p&gt;&lt;/td&gt;&lt;td rowspan=\&quot;2\&quot; style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;초, 중, 고&lt;/p&gt;&lt;/td&gt;&lt;td rowspan=\&quot;2\&quot; style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;현대백화점 대구점&lt;/p&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;(문화홀 9층)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;2&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;영화&lt;/p&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;‘암수살인’&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;12.7.(금)&lt;/p&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;11:00, 14:00, 17:00&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;90명&lt;/p&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;(총 3회/회당 30명)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;3&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;양준혁 특강&lt;/p&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;‘뛰어라! 지금이 마지막인 것 처럼!’&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;11.30.(금) 15:00&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;100명&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;초, 중, 고,&lt;/p&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;교직원&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;대구현지법인&lt;br&gt;신세계백화점&lt;/p&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;(문화홀 8층)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;4&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;아오이데 트리오 리사이틀&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;12.14.(금) 15:00&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;100명&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;초, 중, 고,&lt;/p&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;교직원&lt;/p&gt;&lt;/td&gt;&lt;td style=\&quot;background-color: initial;\&quot;&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;대구현지법인&lt;br&gt;신세계백화점&lt;/p&gt;&lt;p style=\&quot;text-align: left;\&quot;&gt;(문화홀 8층)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&quot;}]</textarea>
+
+<div id="content" style="display: none">
+    <p style="text-align: left;">
+        <strong><u>Hello </u>Wor</strong><u>ld</u><br>B Y E
+    </p>
+    <p style="text-align: left;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+        qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p style="text-align: center;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+        qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p style="text-align: right;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+        qui officia deserunt mollit anim id est laborum.
+    </p>
+    <img src="https://dummyimage.com/600x400/000/fff" alt="600 x 400의 검은 배경, 흰 글씨 이미지">
+    <div data-node="video" data-source="youtube" data-source-id="rRzxEiBLQCA"
+         data-thumbnail="https://img.youtube.com/vi/rRzxEiBLQCA/0.jpg" data-title="TWICE &quot;Heart Shaker&quot; M/V"
+         data-url="https://www.youtube.com/watch?v=rRzxEiBLQCA"></div>
+    <blockquote>quote<br>2 quote</blockquote>
+    <hr data-style="1" contenteditable="false">
+    <hr data-style="2" contenteditable="false">
+    <hr data-style="3" contenteditable="false">
+    <hr data-style="4" contenteditable="false">
+    <h2>제목은 헤드라인에 적으시면 됩니다</h2>
+
+    <table style="min-width: 150px;">
+        <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tbody>
+        <tr>
+            <td style="background-color: initial;"><p style="text-align: left;">연번</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">프로그램명</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">날짜</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">지원 가능 인원</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">참가 대상</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">기부 기관</p>
+                <p style="text-align: left;">(장소)</p></td>
+        </tr>
+        <tr>
+            <td style="background-color: initial;"><p style="text-align: left;">1</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">영화</p>
+                <p style="text-align: left;">‘안시성’</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">12.5.(수)</p>
+                <p style="text-align: left;">11:00, 14:00, 17:00</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">90명</p>
+                <p style="text-align: left;">(총 3회/회당 30명)</p></td>
+            <td rowspan="2" style="background-color: initial;"><p style="text-align: left;">초, 중, 고</p></td>
+            <td rowspan="2" style="background-color: initial;"><p style="text-align: left;">현대백화점 대구점</p>
+                <p style="text-align: left;">(문화홀 9층)</p></td>
+        </tr>
+        <tr>
+            <td style="background-color: initial;"><p style="text-align: left;">2</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">영화</p>
+                <p style="text-align: left;">‘암수살인’</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">12.7.(금)</p>
+                <p style="text-align: left;">11:00, 14:00, 17:00</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">90명</p>
+                <p style="text-align: left;">(총 3회/회당 30명)</p></td>
+        </tr>
+        <tr>
+            <td style="background-color: initial;"><p style="text-align: left;">3</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">양준혁 특강</p>
+                <p style="text-align: left;">‘뛰어라! 지금이 마지막인 것 처럼!’</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">11.30.(금) 15:00</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">100명</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">초, 중, 고,</p>
+                <p style="text-align: left;">교직원</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">대구현지법인<br>신세계백화점</p>
+                <p style="text-align: left;">(문화홀 8층)</p></td>
+        </tr>
+        <tr>
+            <td style="background-color: initial;"><p style="text-align: left;">4</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">아오이데 트리오 리사이틀</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">12.14.(금) 15:00</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">100명</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">초, 중, 고,</p>
+                <p style="text-align: left;">교직원</p></td>
+            <td style="background-color: initial;"><p style="text-align: left;">대구현지법인<br>신세계백화점</p>
+                <p style="text-align: left;">(문화홀 8층)</p></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script type="text/javascript" src="main.js"></script></body>
+</html>
